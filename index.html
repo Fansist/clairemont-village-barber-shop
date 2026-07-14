@@ -1,0 +1,1447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clairemont Village Barber Shop | Men's &amp; Boys' Haircuts in San Diego, CA</title>
+<meta name="description" content="Clairemont Village Barber Shop has served the Clairemont neighborhood of San Diego for roughly 55 years, traditional men's and boys' haircuts, fades, hot towel shaves, and beard trims. Walk-ins welcome, open 7 days a week.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0a1730">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Oswald:wght@400;500;600;700&family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy: #142748;
+    --navy-deep: #0a1730;
+    --navy-mid: #1c3560;
+    --red: #b3312c;
+    --red-deep: #8c2320;
+    --red-bright: #c73b34;
+    --cream: #f5efe1;
+    --cream-soft: #ece0c9;
+    --cream-dim: #d9cbaa;
+    --chrome: #c9c2b2;
+    --ink: #201a13;
+    --ink-soft: #45392c;
+    --wood: #6b4326;
+    --wood-dark: #3d2716;
+    --focus: #e0a933;
+    --gold: #cf9b3a;
+    --radius-sm: 4px;
+    --radius: 10px;
+    --radius-lg: 18px;
+    --serif-display: 'Yeseva One', Georgia, serif;
+    --sans-head: 'Oswald', 'Arial Narrow', sans-serif;
+    --sans-body: 'Libre Franklin', system-ui, sans-serif;
+    --ease: cubic-bezier(.22,1,.36,1);
+    --shadow-sm: 0 2px 8px rgba(10,15,30,.12);
+    --shadow-md: 0 10px 28px rgba(10,15,30,.16);
+    --shadow-lg: 0 24px 60px rgba(6,10,24,.28);
+  }
+
+  *,*::before,*::after{ box-sizing: border-box; }
+  html{ scroll-behavior: smooth; }
+  body{
+    margin:0;
+    background: var(--cream);
+    color: var(--ink);
+    font-family: var(--sans-body);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+  }
+  img{ max-width:100%; display:block; }
+
+  h1,h2,h3{
+    font-family: var(--serif-display);
+    color: var(--navy);
+    line-height: 1.12;
+    margin: 0 0 .5em;
+    font-weight: 400;
+    letter-spacing: .003em;
+  }
+  h2{ font-size: clamp(2rem, 1.35rem + 2.6vw, 3.1rem); }
+  h3{ font-size: clamp(1.15rem, 1.05rem + .4vw, 1.35rem); }
+  p{ margin: 0 0 1em; }
+
+  a{ color: var(--red-deep); }
+  a:focus-visible,
+  button:focus-visible,
+  [tabindex]:focus-visible{
+    outline: 3px solid var(--focus);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  .container{
+    width: 100%;
+    max-width: 1160px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+  }
+
+  .visually-hidden{
+    position: absolute;
+    width: 1px; height: 1px;
+    padding: 0; margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .skip-link{
+    position: absolute;
+    left: 1rem;
+    top: -60px;
+    background: var(--cream);
+    color: var(--navy);
+    padding: .75rem 1.25rem;
+    border-radius: var(--radius-sm);
+    font-family: var(--sans-head);
+    font-weight: 600;
+    z-index: 200;
+    transition: top .2s var(--ease);
+    box-shadow: var(--shadow-md);
+  }
+  .skip-link:focus{ top: 1rem; }
+
+  /* ---------- Reusable stripe texture ---------- */
+  .pole-stripes{
+    background-image: repeating-linear-gradient(
+      45deg,
+      var(--red) 0 14px,
+      var(--cream) 14px 28px,
+      var(--navy) 28px 42px,
+      var(--cream) 42px 56px
+    );
+  }
+  .stripe-rule{
+    height: 8px;
+    background-image: repeating-linear-gradient(
+      45deg,
+      var(--red) 0 10px,
+      var(--navy) 10px 20px,
+      var(--focus) 20px 22px,
+      var(--navy) 22px 32px,
+      var(--red) 32px 42px
+    );
+    background-size: 200% 100%;
+  }
+
+  /* subtle grain overlay used on dark sections for atmosphere */
+  .grain{ position: relative; isolation: isolate; }
+  .grain::before{
+    content:"";
+    position:absolute; inset:0;
+    pointer-events:none;
+    z-index: 1;
+    opacity:.5;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.35'/%3E%3C/svg%3E");
+  }
+
+  /* photo grading: unify flat storefront/interior snapshots with the palette */
+  .graded{
+    filter: saturate(.82) contrast(1.08) brightness(.97) sepia(.08);
+  }
+
+  /* ---------- Header ---------- */
+  .site-header{
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: var(--navy-deep);
+    border-bottom: 3px solid var(--red);
+    box-shadow: 0 2px 16px rgba(0,0,0,.3);
+  }
+  .header-inner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    padding: .7rem 1.5rem;
+  }
+  .brand{
+    display: flex;
+    align-items: center;
+    gap: .7rem;
+    text-decoration: none;
+    color: var(--cream);
+    border-radius: var(--radius-sm);
+    min-width: 0;
+  }
+  .brand-mark{ width: 42px; height: 42px; flex-shrink: 0; transition: transform .3s var(--ease); }
+  .brand:hover .brand-mark{ transform: rotate(-8deg); }
+  .brand-text{
+    font-family: var(--serif-display);
+    font-size: 1.18rem;
+    line-height: 1.1;
+    color: var(--cream);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .brand-text span{
+    display: block;
+    font-family: var(--sans-head);
+    font-size: .6rem;
+    letter-spacing: .17em;
+    text-transform: uppercase;
+    color: var(--focus);
+    margin-top: .3rem;
+    font-weight: 500;
+    white-space: normal;
+  }
+
+  .main-nav ul{
+    list-style: none;
+    display: flex;
+    gap: 1.9rem;
+    margin: 0;
+    padding: 0;
+  }
+  .main-nav a{
+    position: relative;
+    color: var(--cream-soft);
+    text-decoration: none;
+    font-family: var(--sans-head);
+    font-weight: 500;
+    letter-spacing: .05em;
+    text-transform: uppercase;
+    font-size: .82rem;
+    padding: .5rem .05rem;
+    display: inline-block;
+    transition: color .2s var(--ease);
+  }
+  .main-nav a::after{
+    content:"";
+    position: absolute;
+    left:0; right:100%;
+    bottom: .2rem;
+    height: 2px;
+    background: var(--red-bright);
+    transition: right .28s var(--ease);
+  }
+  .main-nav a:hover{ color: #fff; }
+  .main-nav a:hover::after{ right: 0; }
+  .main-nav a[aria-current="page"]{ color: var(--focus); }
+
+  .nav-toggle{
+    display: none;
+    background: transparent;
+    border: 2px solid var(--cream-soft);
+    color: var(--cream);
+    border-radius: var(--radius-sm);
+    padding: .45rem .65rem;
+    font-family: var(--sans-head);
+    font-size: .8rem;
+    cursor: pointer;
+    transition: border-color .2s ease, background .2s ease;
+  }
+  .nav-toggle:hover{ border-color: var(--focus); background: rgba(224,169,51,.1); }
+
+  .header-cta{
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    background: var(--red);
+    color: #fff;
+    text-decoration: none;
+    font-family: var(--sans-head);
+    font-weight: 600;
+    letter-spacing: .03em;
+    padding: .6rem 1.2rem;
+    border-radius: 999px;
+    font-size: .85rem;
+    white-space: nowrap;
+    box-shadow: 0 4px 14px rgba(179,49,44,.35);
+    transition: background .2s var(--ease), transform .2s var(--ease), box-shadow .2s var(--ease);
+  }
+  .header-cta:hover{ background: var(--red-bright); transform: translateY(-2px); box-shadow: 0 8px 20px rgba(179,49,44,.45); }
+  .header-cta:active{ transform: translateY(0); box-shadow: 0 3px 10px rgba(179,49,44,.4); }
+
+  @media (max-width: 780px){
+    .main-nav{
+      position: absolute;
+      top: 100%;
+      left: 0; right: 0;
+      background: var(--navy-deep);
+      border-bottom: 4px solid var(--red);
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height .32s var(--ease);
+      box-shadow: var(--shadow-lg);
+    }
+    .main-nav.is-open{ max-height: 420px; }
+    .main-nav ul{
+      flex-direction: column;
+      gap: 0;
+      padding: .5rem 1.5rem 1.4rem;
+    }
+    .main-nav li{ border-top: 1px solid rgba(243,234,217,.1); }
+    .main-nav a{ display: block; padding: .9rem 0; }
+    .main-nav a::after{ display:none; }
+    .nav-toggle{ display: inline-flex; align-items:center; gap:.4rem; }
+    .header-cta.desktop-only{ display:none; }
+  }
+  @media (min-width: 781px){
+    .nav-toggle{ display: none; }
+  }
+
+  /* ---------- Hero ---------- */
+  .hero{
+    position: relative;
+    color: var(--cream);
+    background:
+      linear-gradient(155deg, rgba(6,12,28,.95) 0%, rgba(13,26,52,.92) 42%, rgba(110,29,27,.88) 100%),
+      url('photos/photo6.jpg');
+    background-size: cover;
+    background-position: center 42%;
+    overflow: hidden;
+    padding: clamp(4rem, 3rem + 5vw, 7.5rem) 0 clamp(4rem, 3rem + 4vw, 6.5rem);
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background-image: radial-gradient(circle at 12% 15%, rgba(224,169,51,.12) 0, transparent 40%),
+                       radial-gradient(circle at 90% 85%, rgba(179,49,44,.16) 0, transparent 45%);
+    pointer-events: none;
+  }
+  .hero-inner{
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1.15fr .85fr;
+    gap: 3rem;
+    align-items: center;
+  }
+  @media (max-width: 880px){
+    .hero-inner{ grid-template-columns: 1fr; text-align: center; }
+    .hero-pole{ margin: .5rem auto 0; }
+  }
+  .eyebrow{
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    font-family: var(--sans-head);
+    text-transform: uppercase;
+    letter-spacing: .24em;
+    font-size: .74rem;
+    color: var(--focus);
+    margin-bottom: 1.15rem;
+    font-weight: 500;
+  }
+  .eyebrow::before{
+    content:"";
+    width: 30px; height: 2px;
+    background: var(--focus);
+    display:inline-block;
+  }
+  @media (max-width: 880px){ .eyebrow{ justify-content:center; } }
+
+  .hero h1{
+    color: #fff;
+    font-size: clamp(2.5rem, 1.6rem + 4.2vw, 4.4rem);
+    text-shadow: 0 4px 22px rgba(0,0,0,.5);
+  }
+  .hero .tagline{
+    font-family: var(--sans-head);
+    font-weight: 400;
+    font-size: clamp(1.05rem, .95rem + .5vw, 1.32rem);
+    color: var(--cream-soft);
+    letter-spacing: .01em;
+    max-width: 48ch;
+    margin: 0 0 1.9rem;
+    text-shadow: 0 2px 14px rgba(0,0,0,.4);
+  }
+  @media (max-width: 880px){ .hero .tagline{ margin-inline: auto; } }
+
+  .hero-ctas{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  @media (max-width: 880px){ .hero-ctas{ justify-content: center; } }
+
+  .btn{
+    display: inline-flex;
+    align-items: center;
+    gap: .55rem;
+    font-family: var(--sans-head);
+    font-weight: 600;
+    letter-spacing: .03em;
+    text-decoration: none;
+    padding: 1rem 1.85rem;
+    border-radius: 999px;
+    font-size: .95rem;
+    transition: transform .22s var(--ease), box-shadow .22s var(--ease), background .22s var(--ease), border-color .22s var(--ease);
+    border: 2px solid transparent;
+    cursor: pointer;
+  }
+  .btn-primary{
+    background: var(--red);
+    color: #fff;
+    box-shadow: 0 10px 26px rgba(179,49,44,.4);
+  }
+  .btn-primary:hover{ background: var(--red-bright); transform: translateY(-3px); box-shadow: 0 14px 32px rgba(179,49,44,.5); }
+  .btn-primary:active{ transform: translateY(-1px); box-shadow: 0 6px 16px rgba(179,49,44,.45); }
+  .btn-secondary{
+    background: rgba(20,39,72,.25);
+    color: var(--cream);
+    border-color: rgba(243,234,217,.55);
+    backdrop-filter: blur(3px);
+  }
+  .btn-secondary:hover{ border-color: var(--cream); background: rgba(243,234,217,.14); transform: translateY(-3px); }
+  .btn-secondary:active{ transform: translateY(-1px); background: rgba(243,234,217,.2); }
+
+  .hero-stats{
+    display: flex;
+    gap: clamp(1.4rem, 1rem + 2vw, 2.4rem);
+    margin-top: 2.75rem;
+    flex-wrap: wrap;
+  }
+  @media (max-width: 880px){ .hero-stats{ justify-content: center; } }
+  .hero-stats div{ text-align: left; }
+  @media (max-width: 880px){ .hero-stats div{ text-align: center; } }
+  .stat-num{
+    font-family: var(--serif-display);
+    font-size: clamp(1.7rem, 1.5rem + .8vw, 2.15rem);
+    color: var(--focus);
+    display: block;
+  }
+  .stat-label{
+    font-family: var(--sans-head);
+    font-size: .72rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--cream-soft);
+  }
+
+  /* rotating barber pole graphic */
+  .hero-pole{
+    width: 190px;
+    max-width: 55vw;
+    aspect-ratio: 1;
+    filter: drop-shadow(0 20px 34px rgba(0,0,0,.55));
+  }
+  .pole-cylinder{
+    transform-origin: center;
+    animation: spin-pole 6s linear infinite;
+  }
+  @keyframes spin-pole{
+    from{ transform: translateY(0); }
+    to{ transform: translateY(-56px); }
+  }
+
+  /* ---------- Section shell ---------- */
+  section{ padding: clamp(4rem, 3rem + 4vw, 6.5rem) 0; }
+  .section-head{
+    max-width: 62ch;
+    margin: 0 auto clamp(2.5rem, 2rem + 2vw, 3.5rem);
+    text-align: center;
+  }
+  .section-head .eyebrow{ justify-content: center; color: var(--red-deep); }
+  .section-head .eyebrow::before{ background: var(--red-deep); }
+  .section-head p{ color: var(--ink-soft); font-size: 1.08rem; }
+
+  /* ---------- About ---------- */
+  .about{
+    background: var(--cream);
+    position: relative;
+  }
+  .about-grid{
+    display: grid;
+    grid-template-columns: .85fr 1.15fr;
+    gap: clamp(2.5rem, 2rem + 2vw, 4rem);
+    align-items: center;
+  }
+  @media (max-width: 840px){ .about-grid{ grid-template-columns: 1fr; } }
+
+  .about-visual{
+    position: relative;
+    aspect-ratio: 4/5;
+    border-radius: var(--radius-lg);
+    background: var(--wood-dark);
+    box-shadow: inset 0 0 0 9px var(--cream), inset 0 0 0 12px var(--chrome), var(--shadow-lg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .about-visual::before{
+    content:"";
+    position:absolute;
+    inset: -18px -18px auto auto;
+    top: -22px; right: -22px;
+    width: 130px; height: 130px;
+    background: var(--gold);
+    border-radius: 50%;
+    opacity: .14;
+    z-index: 0;
+    filter: blur(2px);
+  }
+  .about-visual img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    transition: transform .6s var(--ease);
+  }
+  .about-visual:hover img{ transform: scale(1.04); }
+  .about-visual::after{
+    content:"";
+    position:absolute; inset:0;
+    box-shadow: inset 0 -60px 70px -40px rgba(10,10,5,.4);
+    pointer-events:none;
+  }
+  .about-visual-badge{
+    position: absolute;
+    left: 1.1rem;
+    bottom: 1.1rem;
+    z-index: 2;
+    background: rgba(10,23,48,.82);
+    backdrop-filter: blur(4px);
+    color: var(--cream);
+    font-family: var(--sans-head);
+    font-size: .72rem;
+    letter-spacing: .06em;
+    text-transform: uppercase;
+    padding: .5rem .85rem;
+    border-radius: var(--radius-sm);
+    border: 1px solid rgba(243,234,217,.25);
+  }
+
+  .about-copy p{ color: var(--ink-soft); font-size: 1.06rem; }
+  .about-copy .lede{
+    font-family: var(--sans-head);
+    font-size: 1.22rem;
+    color: var(--navy);
+    font-weight: 500;
+    line-height: 1.45;
+  }
+  .about-badges{
+    display: flex;
+    flex-wrap: wrap;
+    gap: .75rem;
+    margin-top: 1.85rem;
+  }
+  .badge{
+    display: inline-flex;
+    align-items: center;
+    gap: .5rem;
+    background: #fff;
+    border: 1px solid var(--chrome);
+    padding: .55rem 1.05rem;
+    border-radius: 999px;
+    font-family: var(--sans-head);
+    font-size: .8rem;
+    letter-spacing: .03em;
+    color: var(--navy);
+    box-shadow: var(--shadow-sm);
+    transition: transform .22s var(--ease), box-shadow .22s var(--ease), border-color .22s var(--ease);
+  }
+  .badge:hover{ transform: translateY(-2px); box-shadow: var(--shadow-md); border-color: var(--red); }
+  .badge svg{ width: 16px; height: 16px; flex-shrink: 0; color: var(--red-deep); }
+
+  /* ---------- Services ---------- */
+  .services{
+    background: var(--navy);
+    background-image:
+      linear-gradient(180deg, var(--navy-deep) 0%, var(--navy) 14%),
+      radial-gradient(circle at 92% 8%, rgba(179,49,44,.2), transparent 45%),
+      radial-gradient(circle at 4% 92%, rgba(224,169,51,.08), transparent 40%);
+    color: var(--cream);
+    position: relative;
+  }
+  .services .section-head .eyebrow{ color: var(--focus); }
+  .services .section-head .eyebrow::before{ background: var(--focus); }
+  .services .section-head p{ color: var(--cream-soft); }
+
+  .service-grid{
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+  .service-card{
+    background: rgba(243,234,217,.05);
+    border: 1px solid rgba(243,234,217,.14);
+    border-radius: var(--radius);
+    padding: 1.9rem 1.75rem;
+    transition: transform .3s var(--ease), background .3s var(--ease), border-color .3s var(--ease), box-shadow .3s var(--ease);
+  }
+  .service-card:hover{
+    transform: translateY(-6px);
+    background: rgba(243,234,217,.09);
+    border-color: var(--red-bright);
+    box-shadow: 0 18px 34px rgba(0,0,0,.32);
+  }
+  .service-icon-wrap{
+    width: 52px; height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(224,169,51,.12);
+    border: 1px solid rgba(224,169,51,.25);
+    margin-bottom: 1.15rem;
+    transition: background .3s var(--ease), transform .3s var(--ease);
+  }
+  .service-card:hover .service-icon-wrap{
+    background: rgba(224,169,51,.2);
+    transform: scale(1.06);
+  }
+  .service-icon{
+    width: 24px; height: 24px;
+    color: var(--focus);
+  }
+  .service-card h3{ color: #fff; margin-bottom: .4rem; }
+  .service-card p{ color: var(--cream-soft); font-size: .93rem; margin: 0; }
+
+  /* ---------- Highlights strip ---------- */
+  .highlights{
+    background: var(--red);
+    background-image: linear-gradient(155deg, var(--red-bright) 0%, var(--red-deep) 100%);
+    color: #fff;
+    padding: clamp(3rem, 2.5rem + 2vw, 4rem) 0;
+    position: relative;
+  }
+  .highlights-grid{
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 2.25rem;
+    text-align: center;
+  }
+  .highlight-item svg{ width: 38px; height: 38px; margin: 0 auto .8rem; color: var(--focus); }
+  .highlight-item h3{ color: #fff; font-size: 1.08rem; margin-bottom: .35rem; }
+  .highlight-item p{ color: rgba(255,255,255,.9); font-size: .92rem; margin: 0; }
+
+  /* ---------- Gallery ---------- */
+  .gallery{ background: var(--cream-soft); }
+  .gallery-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 1.35rem;
+  }
+  .gallery-item{
+    position: relative;
+    border-radius: var(--radius);
+    overflow: hidden;
+    aspect-ratio: 4/3;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--chrome);
+    transition: box-shadow .3s var(--ease), transform .3s var(--ease);
+  }
+  .gallery-item:hover,
+  .gallery-item:focus-within{
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+  }
+  .gallery-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s var(--ease), filter .5s var(--ease);
+  }
+  .gallery-item::after{
+    content:"";
+    position:absolute; inset:0;
+    box-shadow: inset 0 -60px 60px -30px rgba(10,10,5,.45);
+    pointer-events:none;
+  }
+  .gallery-item:hover img,
+  .gallery-item:focus-within img{ transform: scale(1.08); filter: saturate(1.05) contrast(1.1) brightness(1) sepia(0); }
+  .gallery-caption{
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    z-index: 2;
+    padding: .9rem 1rem .75rem;
+    font-family: var(--sans-head);
+    font-size: .78rem;
+    letter-spacing: .02em;
+    color: var(--cream);
+    text-shadow: 0 2px 8px rgba(0,0,0,.6);
+  }
+  @media (prefers-reduced-motion: reduce){
+    .gallery-item:hover img, .gallery-item:focus-within img{ transform: none; }
+  }
+
+  /* ---------- FAQ ---------- */
+  .faq{ background: var(--cream); }
+  .faq-list{
+    max-width: 780px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .faq-item{
+    background: #fff;
+    border: 1px solid var(--chrome);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+    transition: box-shadow .25s var(--ease), border-color .25s var(--ease);
+  }
+  .faq-item:hover{ box-shadow: var(--shadow-md); border-color: var(--cream-dim); }
+  .faq-question{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    background: transparent;
+    border: none;
+    text-align: left;
+    padding: 1.25rem 1.5rem;
+    font-family: var(--sans-head);
+    font-weight: 500;
+    font-size: 1.02rem;
+    color: var(--navy);
+    cursor: pointer;
+  }
+  .faq-question:hover{ color: var(--red-deep); }
+  .faq-question .icon-plus{
+    width: 22px; height: 22px;
+    flex-shrink: 0;
+    position: relative;
+    color: var(--red-deep);
+    transition: transform .3s var(--ease);
+  }
+  .faq-item[data-open="true"] .icon-plus{ transform: rotate(135deg); }
+  .faq-answer{
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows .32s var(--ease);
+  }
+  .faq-item[data-open="true"] .faq-answer{ grid-template-rows: 1fr; }
+  .faq-answer-inner{
+    overflow: hidden;
+  }
+  .faq-answer p{
+    padding: 0 1.5rem 1.35rem;
+    color: var(--ink-soft);
+    margin: 0;
+    font-size: .98rem;
+  }
+  @media (prefers-reduced-motion: reduce){
+    .faq-answer{ transition: none; }
+  }
+
+  /* ---------- Visit ---------- */
+  .visit{ background: var(--cream-soft); }
+  .visit-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(1.75rem, 1.5rem + 1vw, 3rem);
+  }
+  @media (max-width: 840px){ .visit-grid{ grid-template-columns: 1fr; } }
+
+  .visit-card{
+    background: #fff;
+    border: 1px solid var(--chrome);
+    border-radius: var(--radius);
+    padding: clamp(1.75rem, 1.5rem + 1vw, 2.4rem);
+    box-shadow: var(--shadow-md);
+    transition: box-shadow .3s var(--ease), transform .3s var(--ease);
+  }
+  .visit-card:hover{ box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+  .visit-card h3{
+    display: flex;
+    align-items: center;
+    gap: .6rem;
+    font-family: var(--sans-head);
+    text-transform: uppercase;
+    letter-spacing: .05em;
+    font-size: 1rem;
+    color: var(--red-deep);
+    margin-bottom: 1.3rem;
+  }
+  .visit-card h3 svg{ width: 22px; height: 22px; flex-shrink: 0; }
+
+  .info-row{
+    display: flex;
+    gap: 1rem;
+    padding: .9rem 0;
+    border-bottom: 1px solid #ece2cc;
+  }
+  .info-row:last-child{ border-bottom: none; }
+  .info-row svg{ width: 20px; height: 20px; flex-shrink: 0; color: var(--navy); margin-top: .15rem; }
+  .info-row .label{
+    font-family: var(--sans-head);
+    font-size: .75rem;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    color: #7a6c58;
+    margin-bottom: .18rem;
+  }
+  .info-row a{ color: var(--navy); font-weight: 600; text-decoration: none; word-break: break-word; }
+  .info-row a:hover{ text-decoration: underline; color: var(--red-deep); }
+
+  .hours-table{ width: 100%; border-collapse: collapse; }
+  .hours-table caption{ text-align: left; margin-bottom: .5rem; }
+  .hours-table th{
+    text-align: left;
+    font-family: var(--sans-head);
+    font-weight: 500;
+    color: var(--ink-soft);
+    padding: .55rem 0;
+    border-bottom: 1px solid #ece2cc;
+    font-size: .92rem;
+  }
+  .hours-table td{
+    padding: .55rem 0;
+    border-bottom: 1px solid #ece2cc;
+    text-align: right;
+    font-weight: 600;
+    color: var(--navy);
+    font-size: .92rem;
+  }
+  .hours-table tr:last-child th,
+  .hours-table tr:last-child td{ border-bottom: none; }
+  .hours-table tr.today th,
+  .hours-table tr.today td{ color: var(--red-deep); }
+  .hours-table tr.today th::after{
+    content: "Today";
+    display: inline-block;
+    margin-left: .5rem;
+    font-family: var(--sans-head);
+    font-size: .62rem;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    background: var(--red-deep);
+    color: #fff;
+    padding: .15rem .4rem;
+    border-radius: 3px;
+    vertical-align: middle;
+  }
+
+  .map-cta{
+    margin-top: 1.85rem;
+    display: inline-flex;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ---------- Footer ---------- */
+  footer{
+    background: var(--navy-deep);
+    color: var(--cream-soft);
+    padding: 3rem 0 2rem;
+  }
+  .footer-inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: flex-start;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(243,234,217,.12);
+  }
+  .footer-brand{
+    display: flex;
+    align-items: center;
+    gap: .65rem;
+  }
+  .footer-brand .brand-mark{ width: 36px; height: 36px; }
+  .footer-brand-text{
+    font-family: var(--serif-display);
+    color: #fff;
+    font-size: 1.08rem;
+  }
+  footer nav ul{
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    margin: 0; padding: 0;
+  }
+  footer nav a{
+    color: var(--cream-soft);
+    text-decoration: none;
+    font-family: var(--sans-head);
+    font-size: .82rem;
+    letter-spacing: .03em;
+    text-transform: uppercase;
+    transition: color .2s ease;
+  }
+  footer nav a:hover{ color: var(--focus); }
+  .footer-bottom{
+    padding-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-between;
+    font-size: .82rem;
+    color: rgba(243,234,217,.6);
+  }
+  .footer-bottom a{ color: rgba(243,234,217,.8); }
+
+  /* ---------- Scroll reveal ---------- */
+  .reveal{
+    opacity: 0;
+    transform: translateY(26px);
+    transition: opacity .7s var(--ease), transform .7s var(--ease);
+  }
+  .reveal.is-visible{ opacity: 1; transform: none; }
+
+  @media (prefers-reduced-motion: reduce){
+    html{ scroll-behavior: auto; }
+    *, *::before, *::after{
+      animation-duration: 0.001ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.001ms !important;
+      scroll-behavior: auto !important;
+    }
+    .reveal{ opacity: 1; transform: none; }
+    .pole-cylinder{ animation: none; }
+  }
+</style>
+      <!-- SEO:START (generated by _seo_inject.js) -->
+    <link rel="canonical" href="https://fansist.github.io/clairemont-village-barber-shop/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Clairemont Village Barber Shop" />
+    <meta property="og:title" content="Clairemont Village Barber Shop: Fades &amp; Trims" />
+    <meta property="og:description" content="Men's and boys' haircuts, fades, and beard trims from a neighborhood Clairemont barbershop." />
+    <meta property="og:url" content="https://fansist.github.io/clairemont-village-barber-shop/" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:image" content="https://fansist.github.io/clairemont-village-barber-shop/photos/photo1.jpg" />
+    <meta property="og:image:alt" content="Storefront window signage reading 'Clairemont Village Barber' with 'Haircuts Men $10 &amp; Boys $9' pricing, barber pole, and open door" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Clairemont Village Barber Shop: Fades &amp; Trims" />
+    <meta name="twitter:description" content="Men's and boys' haircuts, fades, and beard trims from a neighborhood Clairemont barbershop." />
+    <meta name="twitter:image" content="https://fansist.github.io/clairemont-village-barber-shop/photos/photo1.jpg" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BarberShop","name":"Clairemont Village Barber Shop","url":"https://fansist.github.io/clairemont-village-barber-shop/","image":["https://fansist.github.io/clairemont-village-barber-shop/photos/photo1.jpg"],"telephone":"(619) 990-9017","address":{"@type":"PostalAddress","streetAddress":"3085 Clairemont Dr","addressLocality":"San Diego","addressRegion":"CA","postalCode":"92117","addressCountry":"US"},"description":"Classic neighborhood barbershop in the Clairemont Village shopping center that has been in business for roughly 55 years. Specializes in haircuts for men and boys — traditional cuts, tapers, and clipper work at fair prices. Open seven days a week (Mon-Fri 9am-6pm, weekends until 5pm), a true walk...","areaServed":{"@type":"City","name":"San Diego"}}</script>
+    <!-- SEO:END -->
+  </head>
+<body>
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<header class="site-header">
+  <div class="header-inner container">
+    <a class="brand" href="#top" aria-label="Clairemont Village Barber Shop, home">
+      <svg class="brand-mark" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+        <circle cx="30" cy="30" r="28" fill="#f5efe1" stroke="#b3312c" stroke-width="2"/>
+        <g clip-path="url(#poleclip)">
+          <rect x="24" y="4" width="12" height="52" fill="#f5efe1"/>
+          <path d="M24 4 L36 16 L24 28 L36 40 L24 52 L24 4Z" fill="#b3312c"/>
+          <path d="M36 4 L24 16 L36 28 L24 40 L36 52" stroke="#142748" stroke-width="4" fill="none"/>
+        </g>
+        <defs>
+          <clipPath id="poleclip">
+            <rect x="24" y="4" width="12" height="52" rx="6"/>
+          </clipPath>
+        </defs>
+        <rect x="22" y="2" width="16" height="6" rx="2" fill="#142748"/>
+        <rect x="22" y="52" width="16" height="6" rx="2" fill="#142748"/>
+      </svg>
+      <span class="brand-text">Clairemont Village<span>Barber Shop &middot; Clairemont, San Diego</span></span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" id="navToggleBtn">
+      <span id="navToggleLabel">Menu</span>
+    </button>
+
+    <nav class="main-nav" id="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#highlights">Why Us</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#visit">Visit</a></li>
+      </ul>
+    </nav>
+
+    <a class="header-cta desktop-only" href="tel:+16199909017">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      Call (619) 990-9017
+    </a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- HERO -->
+  <section class="hero" id="top">
+    <div class="container hero-inner">
+      <div>
+        <span class="eyebrow">Clairemont, San Diego</span>
+        <h1>Clairemont Village Barber Shop</h1>
+        <p class="tagline">Your dad's barber, still the best in Clairemont, classic men's &amp; boys' haircuts, fades, and hot towel shaves from a neighborhood shop that's been cutting hair for roughly 55 years.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-primary" href="tel:+16199909017">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            Call (619) 990-9017
+          </a>
+          <a class="btn btn-secondary" href="#visit">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Get Directions
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div>
+            <span class="stat-num">~55</span>
+            <span class="stat-label">Years in Clairemont</span>
+          </div>
+          <div>
+            <span class="stat-num">4.1&#9733;</span>
+            <span class="stat-label">94 Birdeye Reviews</span>
+          </div>
+          <div>
+            <span class="stat-num">7</span>
+            <span class="stat-label">Days a Week, Walk-Ins</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-pole" role="img" aria-label="Illustration of a classic red, white, and blue striped barber pole">
+        <svg viewBox="0 0 200 400" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="70" y="0" width="60" height="36" rx="10" fill="#c9c2b2"/>
+          <rect x="60" y="350" width="80" height="50" rx="8" fill="#c9c2b2"/>
+          <rect x="76" y="30" width="48" height="330" fill="#f5efe1"/>
+          <g clip-path="url(#heroClip)">
+            <g class="pole-cylinder">
+              <rect x="76" y="-40" width="48" height="480" fill="#f5efe1"/>
+              <path d="M76 -40 L124 0 L76 40 L124 80 L76 120 L124 160 L76 200 L124 240 L76 280 L124 320 L76 360 L124 400 L76 440" stroke="#b3312c" stroke-width="18" fill="none"/>
+              <path d="M100 -40 L148 0 L100 40 L148 80 L100 120 L148 160 L100 200 L148 240 L100 280 L148 320 L100 360 L148 400 L100 440" stroke="#142748" stroke-width="18" fill="none"/>
+            </g>
+          </g>
+          <defs>
+            <clipPath id="heroClip">
+              <rect x="76" y="30" width="48" height="330"/>
+            </clipPath>
+          </defs>
+          <circle cx="100" cy="18" r="9" fill="#e0a933"/>
+        </svg>
+      </div>
+    </div>
+  </section>
+
+  <div class="stripe-rule" aria-hidden="true"></div>
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-visual reveal">
+          <img class="graded" src="photos/photo4.jpg" alt="Barber giving a customer a haircut in a vintage barber chair, with wood-front counters and mirrors along the wall inside Clairemont Village Barber Shop" decoding="async" width="640" height="480">
+          <span class="about-visual-badge">Inside the shop</span>
+        </div>
+        <div class="about-copy reveal">
+          <span class="eyebrow">Our Story</span>
+          <h2>A true Clairemont institution</h2>
+          <p class="lede">Classic neighborhood barbershop in the Clairemont Village shopping center, in business for roughly 55 years.</p>
+          <p>We specialize in haircuts for men and boys, traditional cuts, tapers, and clipper work at fair prices. This is a true walk-in, community shop, and plenty of our regulars have been coming back for decades. Open seven days a week, Monday through Friday 9am, 6pm and weekends until 5pm.</p>
+          <div class="about-badges">
+            <span class="badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.2L12 16.4 5.7 20.8 8 13.6 2 9.2h7.6z"/></svg>
+              4.1 stars &middot; 94 reviews
+            </span>
+            <span class="badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/></svg>
+              Walk-ins welcome
+            </span>
+            <span class="badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              Open 7 days a week
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="services grain">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">What We Do</span>
+        <h2>Services</h2>
+        <p>Straightforward barbering, done right, at fair prices, for men and boys of every age.</p>
+      </div>
+
+      <div class="service-grid">
+        <div class="service-card reveal">
+          <div class="service-icon-wrap"><svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 3l12 18M18 3L6 21"/><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/></svg></div>
+          <h3>Men's Haircuts</h3>
+          <p>Traditional cuts, tapers, and clipper work tailored to how you like it worn.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon-wrap"><svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 20c2-4 4-6 8-6s6 2 8 6"/><circle cx="12" cy="8" r="4"/></svg></div>
+          <h3>Boys' Haircuts</h3>
+          <p>Patient, friendly cuts for younger clients, a family-friendly neighborhood shop.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon-wrap"><svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 12h18M3 6h18M3 18h12"/></svg></div>
+          <h3>Fades</h3>
+          <p>Clean, precise fades blended to your preferred length and style.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon-wrap"><svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4l16 16M4 20L20 4" stroke-linecap="round"/></svg></div>
+          <h3>Beard Trims</h3>
+          <p>Sharp, even beard shaping and cleanup to finish off your look.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon-wrap"><svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 3v18"/></svg></div>
+          <h3>Head Shaves</h3>
+          <p>Smooth, close head shaves handled with care and a steady hand.</p>
+        </div>
+        <div class="service-card reveal">
+          <div class="service-icon-wrap"><svg class="service-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 14c0-4 3-6 8-6s8 2 8 6-3 6-8 6-8-2-8-6z"/><path d="M8 14h8"/></svg></div>
+          <h3>Hot Towel Shaves</h3>
+          <p>The classic hot towel treatment for a close, comfortable, old-school shave.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HIGHLIGHTS -->
+  <section id="highlights" class="highlights">
+    <div class="container">
+      <div class="highlights-grid">
+        <div class="highlight-item reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          <h3>Clairemont Village</h3>
+          <p>A neighborhood fixture right in the Clairemont Village shopping center.</p>
+        </div>
+        <div class="highlight-item reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2l2.4 7.2H22l-6 4.4 2.3 7.2L12 16.4 5.7 20.8 8 13.6 2 9.2h7.6z"/></svg>
+          <h3>4.1 Stars, 94 Reviews</h3>
+          <p>Rated on Birdeye, plus 33 more reviews on Yelp from regulars around town.</p>
+        </div>
+        <div class="highlight-item reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+          <h3>~55 Years Strong</h3>
+          <p>Generations of Clairemont families have trusted us for a simple, honest haircut.</p>
+        </div>
+        <div class="highlight-item reveal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/></svg>
+          <h3>No Appointment Needed</h3>
+          <p>A true walk-in shop, stop by whenever it works for you.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Around The Shop</span>
+        <h2>See The Shop</h2>
+        <p>A real look inside our Clairemont Village storefront, same shop, same chairs, same crew.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item reveal">
+          <img class="graded" src="photos/photo3.jpg" alt="Clairemont Village Barber Shop storefront exterior under the shopping center awning with barber pole signage and OPEN sign" decoding="async" width="640" height="480">
+          <span class="gallery-caption">The storefront on Clairemont Dr</span>
+        </div>
+        <div class="gallery-item reveal">
+          <img class="graded" src="photos/photo2.jpg" alt="Two barbers cutting hair for customers in vintage barber chairs, with an empty waiting area in the background" decoding="async" width="640" height="480">
+          <span class="gallery-caption">Barbers at work on a weekday</span>
+        </div>
+        <div class="gallery-item reveal">
+          <img class="graded" src="photos/photo5.jpg" alt="Two customers draped in barber capes getting haircuts side by side, with wood cabinetry and a retro tile floor" decoding="async" width="640" height="480">
+          <span class="gallery-caption">Walk-ins, side by side</span>
+        </div>
+        <div class="gallery-item reveal">
+          <img class="graded" src="photos/photo1.jpg" alt="Storefront window lettering reading Clairemont Village Barber with pricing signage, a barber pole, and the open door" decoding="async" width="640" height="480">
+          <span class="gallery-caption">Window signage out front</span>
+        </div>
+        <div class="gallery-item reveal">
+          <img class="graded" src="photos/photo6.jpg" alt="Close-up of the storefront window lettering reading Clairemont Village Barber with a lit OPEN sign and barber pole decals" decoding="async" width="640" height="480">
+          <span class="gallery-caption">Look for the lit OPEN sign</span>
+        </div>
+        <div class="gallery-item reveal">
+          <img class="graded" src="photos/photo4.jpg" alt="A customer seated in a vintage barber chair getting a haircut, with wood-front counters and mirrors along the wall" decoding="async" width="640" height="480">
+          <span class="gallery-caption">A regular in the chair</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="faq">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Good To Know</span>
+        <h2>Frequently Asked Questions</h2>
+        <p>A few honest answers before you stop by.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item reveal" data-open="false">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Do I need an appointment?</span>
+            <svg class="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>No, we're a walk-in shop. Just stop by during business hours and we'll get you in a chair as soon as one opens up.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" data-open="false">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Do you cut kids' hair?</span>
+            <svg class="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>Yes, boys' haircuts are one of our core services. We're a family-friendly neighborhood shop and happy to work with younger clients.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" data-open="false">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>What's parking like at Clairemont Village?</span>
+            <svg class="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>We're located in the Clairemont Village shopping center on Clairemont Dr, which has shared surface parking right out front for customers of the shops in the center.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" data-open="false">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>Do you do fades and modern styles, or just classic cuts?</span>
+            <svg class="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>Both. Fades are one of our regular services alongside traditional cuts, tapers, and clipper work, so tell your barber how you like it worn.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="faq-item reveal" data-open="false">
+          <button class="faq-question" type="button" aria-expanded="false">
+            <span>What are your hours?</span>
+            <svg class="icon-plus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-answer">
+            <div class="faq-answer-inner">
+              <p>We're open seven days a week: Monday through Friday 9am, 6pm, and Saturday &amp; Sunday 9am, 5pm. See the full schedule in the Visit section below.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- VISIT -->
+  <section id="visit" class="visit">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="eyebrow">Come By</span>
+        <h2>Visit the Shop</h2>
+        <p>Walk-ins welcome, seven days a week, in the heart of Clairemont Village.</p>
+      </div>
+
+      <div class="visit-grid">
+        <div class="visit-card reveal">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Location &amp; Contact
+          </h3>
+
+          <div class="info-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <div>
+              <div class="label">Address</div>
+              <a href="https://www.google.com/maps/search/?api=1&query=Clairemont%20Village%20Barber%20Shop%2C%203085%20Clairemont%20Dr%2C%20San%20Diego%2C%20CA%2092117" target="_blank" rel="noopener noreferrer">
+                3085 Clairemont Dr, San Diego, CA 92117
+              </a>
+            </div>
+          </div>
+
+          <div class="info-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <div>
+              <div class="label">Phone</div>
+              <a href="tel:+16199909017">(619) 990-9017</a>
+            </div>
+          </div>
+
+          <a class="btn btn-primary map-cta" href="https://www.google.com/maps/search/?api=1&query=Clairemont%20Village%20Barber%20Shop%2C%203085%20Clairemont%20Dr%2C%20San%20Diego%2C%20CA%2092117" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            Open in Google Maps
+          </a>
+        </div>
+
+        <div class="visit-card reveal">
+          <h3>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            Hours
+          </h3>
+          <table class="hours-table">
+            <caption class="visually-hidden">Weekly business hours</caption>
+            <thead>
+              <tr>
+                <th scope="col">Day</th>
+                <th scope="col">Hours</th>
+              </tr>
+            </thead>
+            <tbody id="hoursBody">
+              <tr data-day="1"><th scope="row">Monday</th><td>9:00 AM, 6:00 PM</td></tr>
+              <tr data-day="2"><th scope="row">Tuesday</th><td>9:00 AM, 6:00 PM</td></tr>
+              <tr data-day="3"><th scope="row">Wednesday</th><td>9:00 AM, 6:00 PM</td></tr>
+              <tr data-day="4"><th scope="row">Thursday</th><td>9:00 AM, 6:00 PM</td></tr>
+              <tr data-day="5"><th scope="row">Friday</th><td>9:00 AM, 6:00 PM</td></tr>
+              <tr data-day="6"><th scope="row">Saturday</th><td>9:00 AM, 5:00 PM</td></tr>
+              <tr data-day="0"><th scope="row">Sunday</th><td>9:00 AM, 5:00 PM</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <svg class="brand-mark" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
+          <circle cx="30" cy="30" r="28" fill="#f5efe1" stroke="#b3312c" stroke-width="2"/>
+          <g clip-path="url(#poleclipFooter)">
+            <rect x="24" y="4" width="12" height="52" fill="#f5efe1"/>
+            <path d="M24 4 L36 16 L24 28 L36 40 L24 52 L24 4Z" fill="#b3312c"/>
+            <path d="M36 4 L24 16 L36 28 L24 40 L36 52" stroke="#142748" stroke-width="4" fill="none"/>
+          </g>
+          <defs>
+            <clipPath id="poleclipFooter">
+              <rect x="24" y="4" width="12" height="52" rx="6"/>
+            </clipPath>
+          </defs>
+        </svg>
+        <span class="footer-brand-text">Clairemont Village Barber Shop</span>
+      </div>
+
+      <nav aria-label="Footer">
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#highlights">Why Us</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#visit">Visit</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="footer-bottom">
+      <span>3085 Clairemont Dr, San Diego, CA 92117 &middot; <a href="tel:+16199909017">(619) 990-9017</a></span>
+      <span>&copy; <span id="year"></span> Clairemont Village Barber Shop. Serving the Clairemont neighborhood.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  (function(){
+    "use strict";
+
+    // Footer year
+    var yearEl = document.getElementById('year');
+    if (yearEl) { yearEl.textContent = new Date().getFullYear(); }
+
+    // Highlight today's row in the hours table
+    var todayIdx = new Date().getDay();
+    var todayRow = document.querySelector('#hoursBody tr[data-day="' + todayIdx + '"]');
+    if (todayRow) { todayRow.classList.add('today'); }
+
+    // Mobile nav toggle
+    var toggleBtn = document.getElementById('navToggleBtn');
+    var toggleLabel = document.getElementById('navToggleLabel');
+    var nav = document.getElementById('primary-nav');
+
+    if (toggleBtn && nav) {
+      toggleBtn.addEventListener('click', function () {
+        var isOpen = nav.classList.toggle('is-open');
+        toggleBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+        toggleLabel.textContent = isOpen ? 'Close' : 'Menu';
+      });
+
+      nav.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          nav.classList.remove('is-open');
+          toggleBtn.setAttribute('aria-expanded', 'false');
+          toggleLabel.textContent = 'Menu';
+        });
+      });
+    }
+
+    // FAQ accordion
+    var faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(function (item) {
+      var btn = item.querySelector('.faq-question');
+      btn.addEventListener('click', function () {
+        var isOpen = item.getAttribute('data-open') === 'true';
+        faqItems.forEach(function (other) {
+          other.setAttribute('data-open', 'false');
+          other.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          item.setAttribute('data-open', 'true');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    // Active section highlight in nav
+    var navLinks = Array.prototype.slice.call(document.querySelectorAll('.main-nav a'));
+    var sections = navLinks
+      .map(function (link) { return document.querySelector(link.getAttribute('href')); })
+      .filter(Boolean);
+
+    if (sections.length && 'IntersectionObserver' in window) {
+      var navObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          var link = document.querySelector('.main-nav a[href="#' + entry.target.id + '"]');
+          if (!link) { return; }
+          if (entry.isIntersecting) {
+            navLinks.forEach(function (l) { l.removeAttribute('aria-current'); });
+            link.setAttribute('aria-current', 'page');
+          }
+        });
+      }, { rootMargin: '-45% 0px -50% 0px' });
+
+      sections.forEach(function (sec) { navObserver.observe(sec); });
+    }
+
+    // Scroll reveal animations
+    var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var revealEls = document.querySelectorAll('.reveal');
+
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      revealEls.forEach(function (el) { el.classList.add('is-visible'); });
+    } else {
+      var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.15 });
+
+      revealEls.forEach(function (el) { observer.observe(el); });
+    }
+  })();
+</script>
+
+</body>
+</html>
